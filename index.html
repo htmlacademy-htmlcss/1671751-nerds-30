@@ -15,22 +15,26 @@
   </head>
   <body class="page-body">
 
-    <header class="main-header"> <!--Шапка страницы-->
+    <header class="main-header container"> <!--Шапка страницы-->
       <nav class="main-nav"> <!--Блок навигации-->
-        <a href="index.html">
-          <img class="main-header-logo" src="img/nerds-logo.svg" alt="Лого Нёрдс"> 
+        <a href="index.html" class="main-header-logo">
+          <img src="img/nerds-logo.svg" alt="Лого Нёрдс"> 
         </a>
+       <div class="main-navigation-wrapper">
         <ul class="site-nav">
           <li class="nav-item"><a href="#">Студия</a></li>
           <li class="nav-item"><a href="#">Клиенты</a></li>
           <li class="nav-item"><a href="catalog.html">Магазин</a></li>
           <li class="nav-item"><a href="#">Контакты</a></li>
         </ul>
-       <img src="img/cart-icon.svg" alt="иконка тележки"><a class="cart-link" href="#">Корзина</a>
+        <div class="cart-nav">
+          <img src="img/cart-icon.svg" alt="иконка тележки"><a class="cart-link" href="#">Корзина</a>
+        </div>
+        </div>
       </nav>
     </header>
 
-    <main class="container"> <!--Основной блок инф.-->
+    <main class="main-container container"> <!--Основной блок инф.-->
       <h1 class="invis">Интернет магазин Нёрдс</h1> 
 
       <section class="sliders"> <!--Блок с определениями и слайдером-->
@@ -105,11 +109,12 @@
               Вы даже не подозреваете<br>
               насколько вы изумительны!
             </p>
-            <button class="button button-offer-yellow" type="button">Заказать</button>
+            <a class="button button-offer-yellow">Заказать</a>
           </li>
         </ul>
       </section>
 
+    <div class="about-stat-logo">
       <section class="about"> <!--Блок с инф. чем занимается кампания и небольшое описание-->
         <h2 class="invis">Краткая информация</h2>
         <p class="about-big-bold-text">
@@ -147,7 +152,8 @@
           </tr>
          </table>
       </section>
-
+    </div>
+    
       <section class="partners"> <!--блок с лого партнеров?-->
         <h2 class="invis">Наши партнёры</h2>
         <ul class="partner-list">
@@ -159,6 +165,7 @@
       </section>
 
       <section class="contacts"> <!--Блок с контактами-->
+      <div class="contact-block">
         <h2>NЁRDS DESIGN STUDIO</h2>
         <p>
           191186, Санкт-Петербург,<br>
@@ -168,19 +175,15 @@
           тел. <a class="contact-phone" href="tel:+78122757575">+7(812) 275-75-75</a>
         </p>
         <button class="button button-text-us" type="submit">Напишите нам</button>
+      </div>
+      <div class="contact-map">
         <img src="img/map_1.jpg" width="1140" height="416" alt="Карта">
         <img src="img/map-marker_1.png" width="231" height="190" alt="Маркер-точка на карте">
+      </div>
       </section>
     </main>
 
-    <footer class="main-footer"> <!--Подвал страницы-->
-      <section class="footer-info"> <!--Блок заголовком и предложением-->
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p>
-          Скидка 10% для друзей из социальных сетей.
-        </p>
-      </section>
-
+    <footer class="main-footer container"> <!--Подвал страницы-->
       <section class="footer-social"> <!--блок подвала с ссылками на соц. сети-->
         <h2 class="invis">Наши соц. сети</h2>  
         <ul class="social-button-list">
@@ -200,6 +203,13 @@
             </a>
           </li>
         </ul>
+      </section>
+
+      <section class="footer-info"> <!--Блок заголовком и предложением-->
+        <h2>Давайте дружить, это выгодно!</h2>
+        <p>
+          Скидка 10% для друзей из социальных сетей.
+        </p>
       </section>
     </footer>
   </body>
