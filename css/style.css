@@ -30,6 +30,12 @@
   --dark-yellow: #E5A722;
 }
 
+/*стиль документf*/
+
+.page {
+    height: 100%;
+}
+
 /*стиль тела по-умолчанию*/
 
 .page-body {
@@ -39,6 +45,9 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
 }
 
 /*стиль невидимости семантических заголовков*/
@@ -51,9 +60,24 @@
 /*-----------СТИЛЬ ГЛАВНОй СТРАНИЦЫ-----------*/
 
 /*стили шапки*/
-
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .main-header {
     background-color: var(--basic-grey);
+    outline: 5px solid rgba(0, 255, 0, 0.7);
+    outline-offset: -5px;
+    
+  }
+.main-header-logo {
+    outline: 5px solid rgba(255, 0, 0, 0.3);
+    outline-offset: -5px; 
+    justify-self: start;
+
 }
 
 /*Стиль навигационного блока*/
@@ -62,13 +86,17 @@
     line-height: 30px;
     text-transform: uppercase;
     font-style: normal;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 .site-nav {
+    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline-offset: -5px;
     list-style: none;
     display: inline-flex;
 }
 .nav-item{
-    padding: 20px;
+    padding: 40px;
 }
 .nav-item a {
     color: var(--basic-black);
@@ -92,16 +120,37 @@
     color: var(--basic-black);
     opacity: 0.3;
 }
+.cart-nav {
+    outline: 5px solid rgba(255, 0, 255, 0.3);
+    outline-offset: -5px;
+    display: inline-flex;
+  } 
 
+
+/* Главный блок */
+
+.main-container {
+    outline: 5px solid rgba(90, 45, 173, 0.7);
+    outline-offset: -5px;  
+}
 
 /*Стиль блока слайдеров*/
 
 .sliders {
     background-color: var(--basic-grey);
-    
+    outline: 5px solid rgba(221, 210, 48, 0.7);
+    outline-offset: -5px;
 }
 .slider-list {
     list-style: none;
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+    column-gap: 5px;
+    margin: 0px;
+}
+.slider-item {
+    outline: 5px solid rgba(46, 182, 170, 0.7);
+    outline-offset: -5px;
 }
 .slider-bold-big-text {
     font-size: 55px;
@@ -115,9 +164,22 @@
 
 /*Стиль блока предложений*/
 
+.offers {
+    outline: 5px solid rgba(24, 49, 187, 0.7);
+    outline-offset: -5px;
+}
+
 .offers-list {
     list-style: none;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    column-gap: 5px;
+    
+}
+.offers-item {
+    outline: 5px solid rgba(3, 2, 5, 0.7);
+    outline-offset: -5px;
+    justify-self: center;
 }
 .offers-item h3 {
    font-size: 24px;
@@ -131,6 +193,16 @@
 
 /*Стиль блока инф. о компании и чем она занимается*/
 
+.about-stat-logo {
+    outline: 5px solid rgba(5, 5, 5, 0.7);
+    outline-offset: -5px;
+    display: grid; 
+    grid-template-columns: max-content max-content;
+}
+.about {
+    outline: 5px solid rgba(240, 8, 143, 0.7);
+    outline-offset: -5px;
+}
 .about-big-bold-text {
     font-size: 45px;
     line-height: 45px;
@@ -151,6 +223,10 @@
 
 /*Стиль секции со статистикой*/
 
+.stat-logo {
+    outline: 5px solid rgba(133, 6, 6, 0.7);
+    outline-offset: -5px;
+}
 .stat-table caption {
     font-weight: 700;
     text-transform: uppercase;
@@ -172,17 +248,46 @@
 
 /*Стиль секции с лого партнеров*/
 
+.partners {
+    outline: 5px solid rgba(168, 94, 94, 0.7);
+    outline-offset: -5px;
+    display: grid;
+
+}
+
 .partner-list {
     list-style: none;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.partner-item {
+    outline: 5px solid rgb(19, 250, 69);
+    outline-offset: -5px;
 }
 
 /*Стиль секции с контактами*/
 
+.contacts {
+    outline: 5px solid rgb(201, 198, 33);
+    outline-offset: -5px;
+    display: grid;
+    grid-template-rows: max-content max-content;
+}
+.contact-block {
+    outline: 5px solid rgb(37, 26, 201);
+    outline-offset: -5px;
+}
+.contact-map {
+    outline: 5px solid rgb(255, 0, 157);
+    outline-offset: -5px;
+    max-width: 1160px;
+    justify-self: center;
+}
 .contacts h2 {
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;  
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;  
 }
 .contacts p {
     color: var(--one-more-grey);
@@ -193,6 +298,7 @@
     color: var(--one-more-grey);
     text-decoration: none;
 }
+
 
 /*Стиль подвала*/
 /*Стиль  блока со скидкой*/
@@ -207,15 +313,31 @@
     font-weight: 400;
     color: var(--light-black);
 }
-
+.main-footer {
+    outline: 5px solid rgba(255, 0, 0, 0.7);
+    outline-offset: -5px;
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+.footer-info {
+    outline: 5px solid rgba(162, 241, 15, 0.842);
+    outline-offset: -5px;  
+}
+.footer-social {
+    outline: 5px solid rgba(57, 22, 211, 0.842);
+    outline-offset: -5px;
+}
 
 /* ------------СТИЛИ КНОПОК----------*/
 /*общий стиль кнопок*/
 
 .button {
+    display: inline-block;
+    vertical-align: middle;
     border-radius: 3px;
     color: var(--basic-white);
-    height: 50px;
+    padding: 10px;
+    text-align: center;
     line-height: 18px;
     font-weight: 500;
     text-transform: uppercase;
@@ -224,7 +346,7 @@
 /*стиль кнопок слайдера*/
 
 .button-slider {
-    width: 240px;
+    min-width: 240px;
     background-color: var(--basic-pink);
     border: none;
 }
@@ -283,6 +405,7 @@
 .button-offer-yellow:hover {
     background-color: var(--light-yellow);
     outline: none;
+    cursor: pointer;
 }
 .button-offer-yellow:active {
     background-color: var(--dark-yellow);
@@ -443,7 +566,10 @@
 
 .templates-list {
     list-style: none;
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content min-content;
+    gap: 10px;
 }
 .template-switch {
     list-style: none;
@@ -465,4 +591,13 @@
 .template-decoration {
     background-color: var(--basic-grey);
     text-align: center;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    grid-template-rows: min-content min-content;
+}
+.main-filter {
+    grid-column: 1 / 2 ;
+    grid-row: 1 / 3  ;
 }
