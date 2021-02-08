@@ -66,9 +66,9 @@
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 .main-header {
-    background-color: var(--basic-grey);
     outline: 5px solid rgba(0, 255, 0, 0.7);
     outline-offset: -5px;
     
@@ -83,6 +83,7 @@
 /*Стиль навигационного блока*/
 
 .main-nav {
+    background-color: var(--basic-grey);
     line-height: 30px;
     text-transform: uppercase;
     font-style: normal;
@@ -138,7 +139,7 @@
 
 .sliders {
     background-color: var(--basic-grey);
-    outline: 5px solid rgba(221, 210, 48, 0.7);
+    outline: 5px solid rgba(22, 22, 22, 0.7);
     outline-offset: -5px;
 }
 .slider-list {
@@ -341,6 +342,9 @@
     line-height: 18px;
     font-weight: 500;
     text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 /*стиль кнопок слайдера*/
@@ -348,15 +352,12 @@
 .button-slider {
     min-width: 240px;
     background-color: var(--basic-pink);
-    border: none;
 }
 .button-slider:hover {
     background-color: var(--light-pink);
-    outline: none;
 }
 .button-slider:active{
     background-color: var(--dark-pink);
-    outline: none;
     color: var(--half-white);
 }   
 
@@ -366,15 +367,12 @@
 .button-offer-pink {
     width: 160px;
     background-color: var(--basic-pink);
-    border: none;
 }
 .button-offer-pink:hover {
     background-color: var(--light-pink);
-    outline: none;
 }
 .button-offer-pink:active {
     background-color: var(--dark-pink);
-    outline: none;
     color: var(--half-white);
 }
 
@@ -383,15 +381,12 @@
 .button-offer-green{
     width: 160px;
     background-color: var(--basic-green);
-    border: none;
 }
 .button-offer-green:hover {
     background-color: var(--light-green);
-    outline: none;
 }
 .button-offer-green:active {
     background-color: var(--dark-green);
-    outline: none;
     color: var(--half-white);
 }
 
@@ -400,16 +395,12 @@
 .button-offer-yellow{
     width: 160px;
     background-color: var(--basic-yellow);
-    border: none;
 }
 .button-offer-yellow:hover {
     background-color: var(--light-yellow);
-    outline: none;
-    cursor: pointer;
 }
 .button-offer-yellow:active {
     background-color: var(--dark-yellow);
-    outline: none;
     color: var(--half-white);
 }
 
@@ -418,15 +409,12 @@
 .button-text-us {
     width: 219px;
     background-color: var(--basic-pink);
-    border: none;
 }
 .button-text-us:hover {
     background-color: var(--light-pink);
-    outline: none;
     }
 .button-text-us:active {
     background-color: var(--dark-pink);
-    outline: none;
     color: var(--half-white);
 }
 
@@ -455,7 +443,6 @@
 .filter-button {
     width: 260px;
     background-color: var(--basic-grey);
-    border: none;
     color: var(--basic-black);
 }
 .filter-button:hover {
@@ -471,7 +458,6 @@
 .button-cost {
     width: 200px;
     background-color: var(--basic-pink);
-    border: none;
 }
 .button-cost:hover {
     background-color: var(--light-pink);
@@ -486,7 +472,6 @@
     width: 50px;
     background-color: var(--basic-grey);
     color: var(--basic-black);
-    border: none;
 }
 .button-int:hover {
     background-color: var(--dark-grey);
@@ -499,7 +484,6 @@
     width: 260px;
     background-color: var(--basic-grey);
     color: var(--basic-black);
-    border: none;
 }
 .button-next:hover {
     background-color: var(--dark-grey);
@@ -516,8 +500,9 @@
 
 .title-shop {
     background-color: var(--basic-grey);
-    padding: 1%;
-
+    display: grid;
+    width: auto;
+    text-align: center;
 }
 .container h1 {
     font-size: 55px;
@@ -532,6 +517,7 @@
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
+
 }
 .filter-features ul, .filter-grid ul{
     list-style: none;
