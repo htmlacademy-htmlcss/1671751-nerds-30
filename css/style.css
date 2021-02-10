@@ -46,8 +46,9 @@
     line-height: 24px;
     font-weight: 500;
     min-height: 100%;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 /*стиль невидимости семантических заголовков*/
@@ -76,7 +77,7 @@
 .main-header-logo {
     outline: 5px solid rgba(255, 0, 0, 0.3);
     outline-offset: -5px; 
-    justify-self: start;
+    margin-left: auto;
 
 }
 
@@ -85,16 +86,30 @@
 .main-nav {
     background-color: var(--basic-grey);
     line-height: 30px;
+    max-width: 1200px;
     text-transform: uppercase;
     font-style: normal;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    align-items: center;
+
+ 
 }
 .site-nav {
     outline: 5px solid rgba(0, 255, 255, 0.3);
     outline-offset: -5px;
     list-style: none;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.main-navigation-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+
 }
 .nav-item{
     padding: 40px;
@@ -124,7 +139,9 @@
 .cart-nav {
     outline: 5px solid rgba(255, 0, 255, 0.3);
     outline-offset: -5px;
-    display: inline-flex;
+    margin-left: 80px;
+
+ 
   } 
 
 
@@ -144,7 +161,8 @@
 }
 .slider-list {
     list-style: none;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-rows: min-content min-content min-content;
     column-gap: 5px;
     margin: 0px;
@@ -172,7 +190,8 @@
 
 .offers-list {
     list-style: none;
-    display: grid;
+    display: flex;
+    justify-content: space-around;
     grid-template-columns: min-content min-content min-content;
     column-gap: 5px;
     
@@ -197,8 +216,8 @@
 .about-stat-logo {
     outline: 5px solid rgba(5, 5, 5, 0.7);
     outline-offset: -5px;
-    display: grid; 
-    grid-template-columns: max-content max-content;
+    display: flex; 
+    justify-content: space-around;
 }
 .about {
     outline: 5px solid rgba(240, 8, 143, 0.7);
@@ -252,14 +271,12 @@
 .partners {
     outline: 5px solid rgba(168, 94, 94, 0.7);
     outline-offset: -5px;
-    display: grid;
-
 }
 
 .partner-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
 }
 
 .partner-item {
@@ -272,8 +289,8 @@
 .contacts {
     outline: 5px solid rgb(201, 198, 33);
     outline-offset: -5px;
-    display: grid;
-    grid-template-rows: max-content max-content;
+    display: flex;
+    flex-direction: column;
 }
 .contact-block {
     outline: 5px solid rgb(37, 26, 201);
@@ -317,8 +334,10 @@
 .main-footer {
     outline: 5px solid rgba(255, 0, 0, 0.7);
     outline-offset: -5px;
-    display: grid;
-    grid-template-columns: max-content max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 .footer-info {
     outline: 5px solid rgba(162, 241, 15, 0.842);
@@ -500,9 +519,9 @@
 
 .title-shop {
     background-color: var(--basic-grey);
-    display: grid;
+    display: flex;
     width: auto;
-    text-align: center;
+    justify-content: center;
 }
 .container h1 {
     font-size: 55px;
@@ -552,10 +571,9 @@
 
 .templates-list {
     list-style: none;
-    display: grid;
-    grid-template-columns: min-content min-content;
-    grid-template-rows: min-content min-content min-content;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .template-switch {
     list-style: none;
@@ -579,11 +597,19 @@
     text-align: center;
 }
 .grid-container {
-    display: grid;
+    display: flex;
+    justify-content: space-around;
+
+    /*display: grid;
     grid-template-columns: min-content min-content;
-    grid-template-rows: min-content min-content;
+    grid-template-rows: min-content min-content;*/
+}
+.flex-container {
+    display: flex;
+    flex-direction: column;
 }
 .main-filter {
-    grid-column: 1 / 2 ;
-    grid-row: 1 / 3  ;
+    width: 25%;
+    /*grid-column: 1 / 2 ;
+    grid-row: 1 / 3  ;*/
 }
