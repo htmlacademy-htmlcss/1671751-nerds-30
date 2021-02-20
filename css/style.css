@@ -9,7 +9,7 @@
   --some-grey: #D7DCDE;
   --another-grey: #B4B9BB;
   --one-more-grey: #666666;
-  --basic-pink: #FB565A;
+  --basic-pink: #fb5659;
   --basic-white: #ffffff;
   --half-white: rgba(255, 255, 255, 0.3);
   --half-black: rgba(0, 0, 0, 0.3);
@@ -62,7 +62,7 @@
 
 /*стили шапки*/
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
@@ -70,49 +70,55 @@
     width: 100%;
 }
 .main-header {
-    outline: 5px solid rgba(0, 255, 0, 0.7);
+    outline: 5px solid rgba(0, 255, 0, 0);
     outline-offset: -5px;
     
   }
-.main-header-logo {
-    outline: 5px solid rgba(255, 0, 0, 0.3);
-    outline-offset: -5px; 
-    margin-left: auto;
-
-}
-
 /*Стиль навигационного блока*/
 
 .main-nav {
     background-color: var(--basic-grey);
     line-height: 30px;
-    max-width: 1200px;
+    max-width: 100%;
     text-transform: uppercase;
     font-style: normal;
     display: flex;
     align-items: center;
+    padding-left: 140px;
+    padding-right: 140px;
+    justify-content: space-between;
 
  
 }
+.main-header-logo {
+    outline: 5px solid rgba(255, 0, 0, );
+    outline-offset: -5px; 
+
+}
+.main-header-logo:hover {
+    opacity: 0.7;
+}
+.main-header-logo:active {
+    opacity: 0.3;
+}
 .site-nav {
-    outline: 5px solid rgba(0, 255, 255, 0.3);
+    outline: 5px solid rgba(0, 255, 255, );
     outline-offset: -5px;
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    
+    margin-right: 224px;
+    margin-left: 140px;
 
 }
 .main-navigation-wrapper {
     display: flex;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     justify-content: space-around;
+    position: relative;
 
 }
 .nav-item{
-    padding: 40px;
+    padding: 22px;
 }
 .nav-item a {
     color: var(--basic-black);
@@ -137,18 +143,31 @@
     opacity: 0.3;
 }
 .cart-nav {
-    outline: 5px solid rgba(255, 0, 255, 0.3);
+    outline: 5px solid rgba(255, 0, 255, 0.);
     outline-offset: -5px;
-    margin-left: 80px;
-
- 
+    padding-left: 25px;
+    padding-right: 0px;
+    padding-top: 22px;
+    padding-bottom: 22px;
   } 
+.cart-nav::before {
+    content: "";
+    position: absolute;
+    top: 44px;
+    left: 865px;
+    width: 15px;
+    height: 15px;
+    background-image: url("/img/cart-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+}
 
 
 /* Главный блок */
 
 .main-container {
-    outline: 5px solid rgba(90, 45, 173, 0.7);
+    outline: 5px solid rgba(90, 45, 173, 0);
     outline-offset: -5px;  
 }
 
@@ -156,20 +175,26 @@
 
 .sliders {
     background-color: var(--basic-grey);
-    outline: 5px solid rgba(22, 22, 22, 0.7);
+    outline: 5px solid rgba(22, 22, 22, 0.);
     outline-offset: -5px;
+    position: relative;
+    margin-bottom: 80px;
 }
 .slider-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    grid-template-rows: min-content min-content min-content;
     column-gap: 5px;
     margin: 0px;
 }
 .slider-item {
-    outline: 5px solid rgba(46, 182, 170, 0.7);
+    outline: 5px solid rgba(46, 182, 170, 0.);
     outline-offset: -5px;
+    display: grid;
+    grid-template-columns: max-content min-content;
+    margin-left: 100px;
+    margin-right: 140px;
+    min-width: 1157px;
 }
 .slider-bold-big-text {
     font-size: 55px;
@@ -180,24 +205,56 @@
     font-weight: 400;
     color: var(--another-black);
 }
+.slide {
+    display: none;
+}
+.slide-current {
+    display: grid;
+}
+.slider-controls {
+    position: absolute;
+    top: 335px;
+    left: 681px;
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.slider-controls button {
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background-color: var(--dark-grey);
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider-controls .current {
+    background-color: var(--basic-pink);
+  }
 
 /*Стиль блока предложений*/
 
 .offers {
-    outline: 5px solid rgba(24, 49, 187, 0.7);
+    outline: 5px solid rgba(24, 49, 187, );
     outline-offset: -5px;
+    padding-bottom: 80px;
+    border-bottom: solid 2px var(--basic-grey);
+    margin-left: 140px;
+    margin-right: 140px;
 }
 
 .offers-list {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    grid-template-columns: min-content min-content min-content;
-    column-gap: 5px;
-    
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 60px;
 }
 .offers-item {
-    outline: 5px solid rgba(3, 2, 5, 0.7);
+    outline: 5px solid rgba(3, 2, 5, );
     outline-offset: -5px;
     justify-self: center;
 }
@@ -214,14 +271,21 @@
 /*Стиль блока инф. о компании и чем она занимается*/
 
 .about-stat-logo {
-    outline: 5px solid rgba(5, 5, 5, 0.7);
+    outline: 5px solid rgba(5, 5, 5, );
     outline-offset: -5px;
     display: flex; 
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-top: 39px;
+    padding-bottom: 73px;
+    border-bottom: solid 2px var(--basic-grey);
 }
 .about {
-    outline: 5px solid rgba(240, 8, 143, 0.7);
+    outline: 5px solid rgba(240, 8, 143,);
     outline-offset: -5px;
+    min-width: 651px;
+
 }
 .about-big-bold-text {
     font-size: 45px;
@@ -239,13 +303,46 @@
 .about-list {
     color: var(--another-black); 
     font-weight: 400;
+    list-style:none;
+    position: relative;
+}
+.about-item:not(:last-of-type){
+    padding-bottom: 22px;
+}
+.about-item1::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-pink);
+    left: 0px;
+    top: 10px;
+}
+.about-item2::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-pink);
+    left: 0px;
+    top: 56px;
+}
+.about-item3::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--basic-pink);
+    left: 0px;
+    top: 102px;
 }
 
 /*Стиль секции со статистикой*/
 
 .stat-logo {
-    outline: 5px solid rgba(133, 6, 6, 0.7);
+    outline: 5px solid rgba(133, 6, 6,);
     outline-offset: -5px;
+    min-width: 374px;
 }
 .stat-table caption {
     font-weight: 700;
@@ -269,38 +366,93 @@
 /*Стиль секции с лого партнеров*/
 
 .partners {
-    outline: 5px solid rgba(168, 94, 94, 0.7);
+    outline: 5px solid rgba(168, 94, 94, );
     outline-offset: -5px;
+    margin-top: 46px;
+    margin-left: 142px;
+    margin-right: 142px;
+    padding-bottom: 44px;
+    border-bottom: solid 2px var(--basic-grey);
 }
-
 .partner-list {
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 41px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    min-width: 1085px;
 }
-
 .partner-item {
-    outline: 5px solid rgb(19, 250, 69);
+    outline: 5px solid rgb(19, 250, 69,);
     outline-offset: -5px;
+    opacity: 0.2;
 }
-
+.partner-item:hover{
+    opacity: 1;
+}
+.partner-item:active {
+    opacity: 0.1;
+}
+.partner-item2::before {
+    content: "";
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-black);
+    position: absolute;
+    top: 10px;
+    left: 286px;
+}
+.partner-item3::before {
+    content: "";
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-black);
+    position: absolute;
+    top: 10px;
+    left: 598px;
+}
+.partner-item4::before {
+    content: "";
+    width: 2px;
+    height: 52px;
+    background-color: var(--basic-black);
+    position: absolute;
+    top: 10px;
+    left: 878px;
+}
 /*Стиль секции с контактами*/
 
 .contacts {
-    outline: 5px solid rgb(201, 198, 33);
+    outline: 5px solid rgb(201, 198, 33 0);
     outline-offset: -5px;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    margin-top: 80px;
 }
 .contact-block {
-    outline: 5px solid rgb(37, 26, 201);
+    outline: 5px solid rgb(37, 26, 201 0);
     outline-offset: -5px;
+    padding: 49px 39px 47px 50px;
+    text-align: center;
+    max-width: 319px;
+    position: absolute;
+    background-color: white;
+    top: 54px;
+    left: 140px;
 }
 .contact-map {
-    outline: 5px solid rgb(255, 0, 157);
+    outline: 5px solid rgb(255, 0, 157 0);
     outline-offset: -5px;
-    max-width: 1160px;
+    max-width: 1440px;
     justify-self: center;
+}
+.map-marker {
+    position: absolute;
+    top: 80px;
+    left: 823px;
 }
 .contacts h2 {
     font-size: 18px;
@@ -332,20 +484,32 @@
     color: var(--light-black);
 }
 .main-footer {
-    outline: 5px solid rgba(255, 0, 0, 0.7);
+    outline: 5px solid rgba(255, 0, 0, 0);
     outline-offset: -5px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 66px;
+    padding-bottom: 68px;
+    min-width: 941px;
     
 }
 .footer-info {
-    outline: 5px solid rgba(162, 241, 15, 0.842);
-    outline-offset: -5px;  
+    outline: 5px solid rgba(162, 241, 15, );
+    outline-offset: -5px;
+    margin-left: 139px;
+    margin-right: auto;  
 }
 .footer-social {
-    outline: 5px solid rgba(57, 22, 211, 0.842);
+    outline: 5px solid rgba(57, 22, 211,);
     outline-offset: -5px;
+    margin-left: 100px;
+
+}
+.social-button-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* ------------СТИЛИ КНОПОК----------*/
@@ -357,6 +521,8 @@
     border-radius: 3px;
     color: var(--basic-white);
     padding: 10px;
+    padding-top: 17px;
+    padding-bottom: 15px;
     text-align: center;
     line-height: 18px;
     font-weight: 500;
@@ -364,6 +530,10 @@
     border: none;
     outline: none;
     cursor: pointer;
+    
+}
+.button:active {
+    box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 /*стиль кнопок слайдера*/
@@ -371,6 +541,7 @@
 .button-slider {
     min-width: 240px;
     background-color: var(--basic-pink);
+    margin-top: 50px;
 }
 .button-slider:hover {
     background-color: var(--light-pink);
@@ -439,17 +610,16 @@
 
 /*стиль ссылок на соц.сети*/
 
-.social-button-list {
-    list-style: none;
-    display: inline-flex;
-}
 .social-button-item {
-    border: var(--light-grey);
     background-color: var(--light-grey);
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-}   
+    width: 81px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 9px;
+}
 .social-button-item:hover {
     background-color: var(--light-pink);
 }
@@ -615,3 +785,91 @@
 }
 
 /* изменения для проверки */
+
+
+/*Модальное Окно*/
+
+.container-modal {
+    margin: auto;
+    position: relative;
+    max-width: 960px;
+    max-height: 590px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+.modal-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-between;    
+}
+.modal-item {
+    width: 360px;
+    margin-bottom: 0px;
+    margin-top: 34px;
+}
+.modal-text-us {
+    font-size: 45px;
+    line-height: 53px;
+    font-weight: 700;
+    margin-top: 63px;
+    margin-left: 100px;
+    margin-bottom: 3px;
+}
+.modal-parameters {
+    line-height: 18px;
+    font-weight: 700;
+}
+.modal-input {
+    background: #FFFFFF;
+    border: 2px solid #D7DCDE;
+    box-sizing: border-box;
+    border-radius: 3px;
+    line-height: 18px;
+    color: var(--light-black);
+    opacity: 0.5;
+    width: 360px;
+    height: 50px;
+    margin-top: 9px;
+    padding-left: 16px;
+}
+.modal-text-area {
+    width: 760px;
+    height: 118px;
+    margin-bottom: 47px;
+    padding-top: 16px;
+}
+.modal-close {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    width: 0px;
+    height: 0px;
+}
+.modal-close::before {
+    content: "";
+    background-image: url(/img/close.svg);
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    
+}
+.modal-close:hover {
+
+}
+
+.modal-button {
+    width: 259px;
+    background-color: var(--basic-pink);
+    margin-left: 100px;
+    margin-bottom: 84px;
+}
+.modal-button:hover {
+    background-color: var(--light-pink);
+    }
+.modal-button:active {
+    background-color: var(--dark-pink);
+    color: var(--half-white);
+}
