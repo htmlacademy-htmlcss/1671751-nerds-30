@@ -28,7 +28,7 @@
             <li class="nav-item"><a href="#">Контакты</a></li>
           </ul>
           <div class="cart-nav">
-            <a class="cart-link" href="#"><img src="img/cart-icon.svg" alt="иконка тележки">Корзина</a>
+            <a class="cart-link" href="#">Корзина</a>
           </div>
         </div>
       </nav>
@@ -40,20 +40,25 @@
       <section class="sliders"> <!--Блок с определениями и слайдером-->
         <h2 class="invis">Определения</h2>
         <ul class="slider-list">
-          <li class="slider-item">
-            <img src="img/nerds-index-slide1_1.png" width="760" height="431" alt="слайд1">
-           <p class="slider-bold-big-text">
-            Долго, дорого, скрупулезно.
+          <li class="slider-item slide slide-current">
+            <div>
+            <p class="slider-bold-big-text">
+            Долго, дорого,<br>
+            скрупулезно.
             </p>
             <p class="slider-bold-small-text">
-           Математически выверенный дизайн<br>
-           для вашего сайта или мобильного приложения.
-           </p>
-           <a class="button button-slider">Узнать больше</a>
+            Математически выверенный дизайн<br>
+            для вашего сайта или мобильного приложения.
+            </p>
+            <a class="button button-slider">Узнать больше</a>
+            </div>
+            <div>
+           <img src="img/nerds-index-slide1_1.png" width="760" height="431" alt="слайд1">
             <!--здесь будет слайдер, я пока не знаю как его делать-->
+            </div>
           </li>
-          <li class="slider-item">
-            <img src="img/nerds-index-slide2_1.png" width="760" height="431" alt="слайд2">
+          <li class="slider-item slide">
+          <div class="slider-text-layer">
             <p class="slider-bold-big-text">
             Любим математику<br> 
             как никто другой.
@@ -63,10 +68,14 @@
             для расчета идеальных пропорций
             </p>
             <a class="button button-slider">Узнать больше</a>
+          </div>
+          <div class="slider-image-layer">
+            <img src="img/nerds-index-slide2_1.png" width="760" height="431" alt="слайд2">
             <!--здесь будет слайдер, я пока не знаю как его делать-->
+          </div>
           </li>
-          <li class="slider-item">
-            <img src="img/nerds-index-slide3_1.png" width="760" height="431" alt="слайд3">
+          <li class="slider-item slide">
+            <div class="slider-text-layer">
             <p class="slider-bold-big-text">
             Только ночь,<br>
             только хардкор
@@ -75,10 +84,19 @@
              Работать днем, как все? Мы против этого.<br>
               Ближе к полуночи работа только начинается.
             </p>
-             <a class="button button-slider">Узнать больше</a>
+            <a class="button button-slider">Узнать больше</a>
+            </div>
+            <div>
+            <img src="img/nerds-index-slide3_1.png" width="760" height="431" alt="слайд3">
             <!--здесь будет слайдер, я пока не знаю как его делать-->
+            </div>
           </li>
         </ul>
+        <div class="slider-controls">
+          <button class="current" type="button" aria-label="Первый слайд"></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button type="button" aria-label="Третий слайд"></button>
+        </div>
       </section>
         
       <section class="offers"> <!--Блок с предложениями-->
@@ -127,9 +145,9 @@
         </p>
         <h3>Выполняем заказы на рзработку:</h3>
         <ul class="about-list">
-          <li class="about-item">Веб сайтов любой сложности</li>
-          <li class="about-item">Мобильных приложений для iOS и Android</li>
-          <li class="about-item">Слайдшоу и видео для корпоративных презентаций</li>
+          <li class="about-item about-item1">Веб сайтов любой сложности</li>
+          <li class="about-item about-item2">Мобильных приложений для iOS и Android</li>
+          <li class="about-item about-item3">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </section>
         
@@ -157,10 +175,10 @@
       <section class="partners"> <!--блок с лого партнеров?-->
         <h2 class="invis">Наши партнёры</h2>
         <ul class="partner-list">
-          <li class="partner-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1_1.svg" alt="лого html-academy"></a></li>
-          <li class="partner-item"><a href="#"><img src="img/logo-2_1.png" width="209" height="90" alt="лого БШ Бородинский"></a></li>
-          <li class="partner-item"><a href="#"><img src="img/logo-3_1.png" width="185" height="52" alt="лого Пинк"></a></li>
-          <li class="partner-item"><a href="#"><img src="img/logo-4_1.png" width="173" height="84" alt="лого Мишка"></a></li>
+          <li class="partner-item partner-item1"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1_1.svg" width="199" height="61" alt="лого html-academy"></a></li>
+          <li class="partner-item partner-item2"><a href="#"><img src="img/logo-2_1.svg" width="209" height="83" alt="лого БШ Бородинский"></a></li>
+          <li class="partner-item partner-item3"><a href="#"><img src="img/logo-3_1.svg" width="185" height="45" alt="лого Пинк"></a></li>
+          <li class="partner-item partner-item4"><a href="#"><img src="img/logo-4_1.svg" width="173" height="77" alt="лого Мишка"></a></li>
         </ul>
       </section>
 
@@ -177,7 +195,9 @@
           <button class="button button-text-us" type="button">Напишите нам</button>
         </div>
         <div class="contact-map">
-          <img src="img/map_1.jpg" width="1140" height="416" alt="Карта">
+          <img src="img/map_1.jpg" width="1440" height="409" alt="Карта">
+        </div>
+        <div class="map-marker">
           <img src="img/map-marker_1.png" width="231" height="190" alt="Маркер-точка на карте">
         </div>
       </section>
@@ -212,5 +232,25 @@
         </p>
       </section>
     </footer>
+
+    <section class="container-modal">
+      <h2 class="modal-text-us">Напишите нам</h2>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-item">
+        <label class="modal-parameters" for="your-name">Ваше имя:</label>
+        <input class="modal-input" id="your-name" type="email" name="fio" placeholder="Имя Фамилия">
+        </p>
+        <p class="modal-item">
+        <label class="modal-parameters" for="your-email">Ваш email:</label>
+        <input class="modal-input" id="your-email" type="text" name="email" placeholder="email@example.com">
+        </p>
+        <p class="modal-item">
+        <label class="modal-parameters" for="text-post">Текст письма:</label>
+        <textarea class="modal-input modal-text-area" name="text-post" id="text-post" rows="1" placeholder="В свободной форме"></textarea>
+        </p>
+      </form>
+      <button class="button modal-button" type="submit">Отправить</button>
+      <button class="modal-close" type="button" aria-label="закрыть окно"></button>
+    </section>
   </body>
 </html>
