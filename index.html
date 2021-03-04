@@ -175,10 +175,10 @@
       <section class="partners"> <!--блок с лого партнеров?-->
         <h2 class="invis">Наши партнёры</h2>
         <ul class="partner-list">
-          <li class="partner-item partner-item1"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1_1.svg" width="199" height="61" alt="лого html-academy"></a></li>
-          <li class="partner-item partner-item2"><a href="#"><img src="img/logo-2_1.svg" width="209" height="83" alt="лого БШ Бородинский"></a></li>
-          <li class="partner-item partner-item3"><a href="#"><img src="img/logo-3_1.svg" width="185" height="45" alt="лого Пинк"></a></li>
-          <li class="partner-item partner-item4"><a href="#"><img src="img/logo-4_1.svg" width="173" height="77" alt="лого Мишка"></a></li>
+          <li class="partner-item partner-item1"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-1_1.svg" width="199" height="61" alt="лого html-academy" class="opacity-offer"></a></li>
+          <li class="partner-item partner-item2"><a href="#"><img src="img/logo-2_1.svg" width="209" height="83" alt="лого БШ Бородинский" class="opacity-offer"></a></li>
+          <li class="partner-item partner-item3"><a href="#"><img src="img/logo-3_1.svg" width="185" height="45" alt="лого Пинк" class="opacity-offer"></a></li>
+          <li class="partner-item partner-item4"><a href="#"><img src="img/logo-4_1.svg" width="173" height="77" alt="лого Мишка" class="opacity-offer"></a></li>
         </ul>
       </section>
 
@@ -236,20 +236,26 @@
     <section class="container-modal">
       <h2 class="modal-text-us">Напишите нам</h2>
       <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="small-modal-row">
         <p class="modal-item">
         <label class="modal-parameters" for="your-name">Ваше имя:</label>
-        <input class="modal-input" id="your-name" type="email" name="fio" placeholder="Имя Фамилия">
+        <input class="modal-input" id="your-name" type="text" name="fio" placeholder="Имя Фамилия">
         </p>
         <p class="modal-item">
         <label class="modal-parameters" for="your-email">Ваш email:</label>
-        <input class="modal-input" id="your-email" type="text" name="email" placeholder="email@example.com">
+        <input class="modal-input" id="your-email" type="email" name="email" placeholder="email@example.com">
         </p>
+        </div>
+        <div>
         <p class="modal-item">
         <label class="modal-parameters" for="text-post">Текст письма:</label>
         <textarea class="modal-input modal-text-area" name="text-post" id="text-post" rows="1" placeholder="В свободной форме"></textarea>
         </p>
+        </div>
+        <div>
+          <button class="button modal-button" type="submit">Отправить</button>
+        </div>
       </form>
-      <button class="button modal-button" type="submit">Отправить</button>
       <button class="modal-close" type="button" aria-label="закрыть окно"></button>
     </section>
   </body>
